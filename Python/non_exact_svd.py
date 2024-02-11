@@ -43,3 +43,10 @@ def simplified_svd_2d(A, k=None, epsilon=1e-10):
             svd_so_far.append((sigma, u, u_or_v))
     singular_values, us, vs = zip(*svd_so_far)  # Unpack the SVD components
     return np.array(singular_values), np.array(us).T, np.array(vs)
+
+if __name__ == '__main__':
+    A = np.random.random((4, 4))
+    S, U, Vt = simplified_svd_2d(A.copy())
+    print("U:\n", U)
+    print("S:\n", np.diag(S))
+    print("V^T:\n", Vt)
