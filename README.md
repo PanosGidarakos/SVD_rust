@@ -1,2 +1,2 @@
-# SVD_rust
+# SVD_wrap
 SVD exposing Golub-Reinsch algorithm
