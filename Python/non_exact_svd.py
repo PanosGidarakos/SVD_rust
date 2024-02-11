@@ -21,6 +21,7 @@ def simplified_svd_1d(A, epsilon=1e-10):
 def simplified_svd_2d(A, k=10, epsilon=1e-10):
     A = np.array(A, dtype=float)
     n, m = A.shape
+    k=min(n,m)
     svd_so_far = []
     k = min(k, min(n, m))
     for _ in range(k):
