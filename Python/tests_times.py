@@ -37,5 +37,5 @@ def compare_svd_performance(steps):
     plt.savefig('timestimestimes.png')
 
 if __name__ == '__main__':
-    steps = range(50, 1000, 50)
+    steps = range(25, 500, 25)
     compare_svd_performance(steps)
