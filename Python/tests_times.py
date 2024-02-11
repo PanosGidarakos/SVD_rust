@@ -1,5 +1,4 @@
 import time
-
 import numpy as np
 from numpy.linalg import svd as numpy_svd
 from scipy.linalg import svd as scipy_svd
@@ -8,13 +7,11 @@ from non_exact_svd import simplified_svd_2d as n_e_svd
 import matplotlib
 matplotlib.use('Agg')  # Set the backend to Agg for non-GUI environments
 import matplotlib.pyplot as plt
-
 def time_svd(func, A):
     start = time.time()
     _ = func(A)
     end = time.time()
     return end - start
-
 def compare_svd_performance(steps):
     t_custom, t_numpy, t_scipy, t_2d = [], [], [], []
     
@@ -34,8 +31,8 @@ def compare_svd_performance(steps):
     plt.legend()
     plt.title('SVD Running Times Comparison')
     plt.show()
-    plt.savefig('timestimestimes.png')
+    plt.savefig('Test_times.png')
 
 if __name__ == '__main__':
-    steps = range(25, 500, 25)
+    steps = range(25, 525, 100)
     compare_svd_performance(steps)
