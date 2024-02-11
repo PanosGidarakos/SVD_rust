@@ -18,10 +18,11 @@ def simplified_svd_1d(A, epsilon=1e-10):
         current_v /= np.linalg.norm(current_v)
     return current_v
 
-def simplified_svd_2d(A, k=10, epsilon=1e-10):
+def simplified_svd_2d(A, k=None, epsilon=1e-10):
     A = np.array(A, dtype=float)
     n, m = A.shape
-    k=min(n,m)
+    if k==None:
+        k=int(min(n,m)/2)
     svd_so_far = []
     k = min(k, min(n, m))
     for _ in range(k):
