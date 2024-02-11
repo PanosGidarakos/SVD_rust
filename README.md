@@ -1,2 +1,2 @@
 # SVD_wrap
-SVD exposing Golub-Reinsch algorithm
+Exposing **Golub-Reinsch**, **Truncated**, **Randomized**, **Incremental**, **User Interaction Gradient Boost** algorithms.
